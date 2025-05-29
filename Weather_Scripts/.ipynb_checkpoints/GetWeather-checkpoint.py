@@ -17,8 +17,8 @@ class Import_Weather_Data:
             "3143244", "2673730", "2759794", "2657896", "3413829", "264371", "112931", "98182", "1581130", "1668341",
             "2063523", "2193733", "5856195", "6173331", "293397", "2553604"]
     def __init__(self, timestamp):
-        self.get_weather_data()
         self.timestamp = timestamp
+        self.get_weather_data()
 
     def get_weather_data(self):
         weather_api_key = os.getenv("WEATHER_API_KEY")
