@@ -9,13 +9,12 @@ class UploadWeatherData:
     
     def __init__(self, weather_result_filename):
         self.weather_result_filename = weather_result_filename
-        print("Hello")
 
     def upload_to_AWS(self):
         # Upload to AWS
         r_name = os.getenv("AWS_REGION")
-        s3 = boto3.client('s3', region_name=r_name)
         bucket_name = os.getenv("AWS_BUCKET")
+        s3 = boto3.client('s3', region_name=r_name)
 
         for filename in os.listdir(self.weather_result_filename):
             local_file_path = os.path.join(self.weather_result_filename,filename)
@@ -60,7 +59,6 @@ class UploadWeatherData:
         client = storage.Client.from_service_account_json(key_path)
 
         directory = self.weather_result_filename
-        #directory = 'C:/Users/saul2/OneDrive/Desktop/PastProjects/ETL_Project/VG_Sales/results'
         bucket = client.bucket(os.getenv("GOOGLE_BUCKET"))
         # Upload the file 
         for file_name in os.listdir(directory):
@@ -68,10 +66,7 @@ class UploadWeatherData:
         
             try:
                 # Upload  file to Google Cloud
-                #print("File: "+ file_name + " uploaded")
-                #blob = bucket.blob(file_name)
                 blob = bucket.blob(file_path) # File path will also create the folders where this file will be stored
-                #print("File_Path: " + file_path)
                 blob.upload_from_filename(file_path)
             except Exception as e:
                 print("Error: " + file_name)

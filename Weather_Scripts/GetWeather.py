@@ -36,8 +36,6 @@ class Import_Weather_Data:
                 if response.status_code == 200:
                     data = response.json()
                     f.write(json.dumps(data) + "\n")
-                    #print(filename)
-                    #print(f"{data['name']}: {data['main']['temp']}°C")
                 else:
                     print(f"❌ Failed for city ID {city_id}: {response.status_code}")
 
