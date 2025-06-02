@@ -53,7 +53,8 @@ class UploadWeatherData:
 
     def upload_to_Google(self):
         current_directory = os.getcwd()
-        base_dir = os.path.abspath(os.path.join(current_directory, "../../sensitive_data"))
+        # base_dir = os.path.abspath(os.path.join(current_directory, "../../sensitive_data"))
+        base_dir = "/home/cephuez/sensitive_data"
         key_path = base_dir + self.google_json_name
 
         client = storage.Client.from_service_account_json(key_path)

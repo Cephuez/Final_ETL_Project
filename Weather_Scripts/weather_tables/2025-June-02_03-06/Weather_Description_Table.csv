@@ -1,0 +1,57 @@
+City_ID,Main_Weather,Description,Icon
+98182,Dust,dust,50d
+108410,Clouds,overcast clouds,04d
+112931,Clear,clear sky,01d
+184745,Clouds,broken clouds,04d
+264371,Clouds,few clouds,02d
+292223,Clear,clear sky,01d
+293397,Clouds,few clouds,02d
+360630,Clouds,scattered clouds,03d
+524901,Clear,clear sky,01d
+658225,Rain,moderate rain,10d
+745044,Clouds,few clouds,02d
+756135,Clouds,broken clouds,04d
+1275339,Haze,haze,50d
+1581130,Clouds,overcast clouds,04d
+1609350,Clouds,broken clouds,04d
+1642911,Clouds,scattered clouds,03d
+1668341,Clouds,broken clouds,04d
+1701668,Clouds,scattered clouds,03d
+1735161,Clouds,few clouds,02d
+1816670,Clear,clear sky,01d
+1835848,Clear,clear sky,01d
+1850147,Rain,light rain,10d
+1880252,Clouds,broken clouds,04d
+2063523,Rain,shower rain,09d
+2147714,Clouds,overcast clouds,04n
+2193733,Clouds,broken clouds,04n
+2332459,Clouds,broken clouds,04d
+2553604,Clouds,broken clouds,04d
+2618425,Clouds,broken clouds,04d
+2643743,Clouds,few clouds,02d
+2657896,Clouds,broken clouds,04d
+2673730,Clouds,scattered clouds,03d
+2759794,Clouds,few clouds,02d
+2761369,Clouds,few clouds,02d
+2800866,Clouds,broken clouds,04d
+2950159,Clouds,few clouds,02d
+2964574,Clouds,few clouds,02d
+2988507,Clouds,scattered clouds,03d
+3054643,Clouds,scattered clouds,03d
+3067696,Clouds,broken clouds,04d
+3117735,Clear,clear sky,01d
+3143244,Clouds,broken clouds,04d
+3169070,Clear,clear sky,01d
+3369157,Clouds,scattered clouds,03d
+3413829,Clouds,broken clouds,04d
+3435910,Clear,clear sky,01n
+3448433,Clear,clear sky,01n
+3530597,Clouds,overcast clouds,04n
+3871336,Clouds,overcast clouds,04n
+3936456,Mist,mist,50n
+4887398,Clear,clear sky,01n
+5128581,Clear,clear sky,01n
+5368361,Clouds,scattered clouds,03n
+5856195,Rain,light rain,10n
+6167865,Clear,clear sky,01n
+6173331,Clouds,few clouds,02n
