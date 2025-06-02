@@ -30,7 +30,7 @@ class UploadWeatherData:
     def upload_to_Azure(self):
         print("Azure")
         # Find string somewhere else
-        connection_string = os.getenv("GOOGLE_CONNECTION_STRING")
+        connection_string = os.getenv("AZURE_CONNECTION_STRING")
         container_name = os.getenv("AZURE_CONTAINER")
         
         blob_service_client = BlobServiceClient.from_connection_string(connection_string)
