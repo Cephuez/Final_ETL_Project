@@ -14,6 +14,9 @@ class UploadWeatherData:
         # Upload to AWS
         r_name = os.getenv("AWS_REGION")
         bucket_name = os.getenv("AWS_BUCKET")
+
+        print("r_name " + r_name)
+        print("AWS_bucket_name: " + bucket_name)
         s3 = boto3.client('s3', region_name=r_name)
 
         for filename in os.listdir(self.weather_result_filename):
@@ -23,7 +26,7 @@ class UploadWeatherData:
             try:
                 # Upload  file to S3
                 s3.upload_file(local_file_path, bucket_name, s3_file_path)
-                print("File: "+ local_file_path+ " uploaded")
+                print("AWS Result: "+ local_file_path+ " uploaded")
             except Exception as e:
                 print("Error: " + local_file_path)
 
@@ -32,6 +35,9 @@ class UploadWeatherData:
         # Find string somewhere else
         connection_string = os.getenv("AZURE_CONNECTION_STRING")
         container_name = os.getenv("AZURE_CONTAINER")
+
+        print("Azure Connection String: " + connection_string)
+        print("Azure Container: " + container_name)
         
         blob_service_client = BlobServiceClient.from_connection_string(connection_string)
         
@@ -47,7 +53,7 @@ class UploadWeatherData:
                 # Upload  file to S3
                 with open(local_file_path, "rb") as data:
                     blob_client.upload_blob(data, overwrite=True)
-                print("File: "+ local_file_path+ " uploaded")
+                print("Azure Result: "+ local_file_path+ " uploaded")
             except Exception as e:
                 print("Error: " + local_file_path)
 
@@ -61,6 +67,7 @@ class UploadWeatherData:
 
         directory = self.weather_result_filename
         bucket = client.bucket(os.getenv("GOOGLE_BUCKET"))
+        print("Google Bucket: " + str(bucket))
         # Upload the file 
         for file_name in os.listdir(directory):
             file_path = os.path.join(directory,file_name)
@@ -69,6 +76,7 @@ class UploadWeatherData:
                 # Upload  file to Google Cloud
                 blob = bucket.blob(file_path) # File path will also create the folders where this file will be stored
                 blob.upload_from_filename(file_path)
+                print("Google Result: " + file_path)
             except Exception as e:
                 print("Error: " + file_name)
 
