@@ -231,7 +231,7 @@ def main():
             FROM FINAL_TABLE
         '''
     result = spark.sql(query)
-    result.show()
+    #result.show()
     
     
     data = result.toPandas()
@@ -272,7 +272,7 @@ def main():
         '''
     
     final_result = spark.sql(query)
-    final_result.show()
+    #final_result.show()
     
     data = final_result.toPandas()
     
