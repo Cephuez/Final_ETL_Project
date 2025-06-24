@@ -4,7 +4,6 @@ class Setup_Weather_Data:
     df = ""
     weather_result_filename = ""
     def __init__(self, spark, filename, timestamp):
-        print("Hi")
         self.create_data_frame(spark, filename)
         self.create_result_directory(timestamp)
 

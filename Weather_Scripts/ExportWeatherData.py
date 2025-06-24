@@ -13,9 +13,9 @@ class Export_Weather_Data:
 
     def to_csv(self, data, parque_name):
         path = os.path.join(self.weather_result_filename, parque_name)
-        data.to_parquet(path, engine='pyarrow') 
+        data.to_csv(path, index=False)
 
     def to_json(self, data, parque_name):
         path = os.path.join(self.weather_result_filename, parque_name)
-        data.to_parquet(path, engine='pyarrow') 
+        data.to_json(path, orient='records', lines=True)
     
