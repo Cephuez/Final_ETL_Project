@@ -11,7 +11,6 @@ class Save_Weather_Tables:
     
     def __init__(self, timestamp):
         self.timestamp = timestamp
-        print("Initiate")
 
     def store_tables(self, df, filename):
         data = df.toPandas()
@@ -33,9 +32,6 @@ class Save_Weather_Tables:
         self.upload_to_AWS()
         self.upload_to_Google()
         self.upload_to_Azure()
-        #directory = f"weather_tables/{self.timestamp}"
-        #os.makedirs(directory, exist_ok=True)
-
 
     def upload_to_AWS(self):
         r_name = os.getenv("AWS_REGION")
@@ -78,7 +74,6 @@ class Save_Weather_Tables:
                 print("Error: " + file_name)        
 
     def upload_to_Azure(self):
-        print("Azure")
         # Find string somewhere else
         connection_string = os.getenv("AZURE_CONNECTION_STRING")
         container_name = os.getenv("AZURE_CONTAINER")

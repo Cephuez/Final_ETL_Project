@@ -5,7 +5,6 @@ class Export_Weather_Data:
     
     def __init__(self, weather_result_filename):
         self.weather_result_filename = weather_result_filename
-        print("hi")
 
     def to_parquet(self, data, parque_name):
         path = os.path.join(self.weather_result_filename, parque_name)
